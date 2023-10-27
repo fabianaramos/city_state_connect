@@ -12,7 +12,8 @@
 # Configure Using Gemfile
 # gem "pg"
 #
-default: &default adapter: postgresql
+default: &default
+  adapter: postgresql
   encoding: unicode
   host: db
   username: postgres
