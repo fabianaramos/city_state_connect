@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @state %>
+<h1><%= render @state %></h1>
 
 <div>
   <%= link_to "Edit this state", edit_state_path(@state) %> |
@@ -8,3 +8,5 @@
 
   <%= button_to "Destroy this state", @state, method: :delete %>
 </div>
+
+<%= render 'cities/index' %>

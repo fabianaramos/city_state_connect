@@ -3,8 +3,11 @@ require 'sidekiq/web'
 # or require 'sidekiq-ent/web'
 
 Rails.application.routes.draw do
-  resources :cities
-  resources :states
+  root 'states#index'
+
+  resources :states do
+    resources :cities
+  end
   resources :import_cities_jobs, only: %i[index show create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
