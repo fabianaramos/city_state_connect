@@ -43,4 +43,4 @@ $ docker exec -it <CONTAINER_ID> rspec
 
 or
 
-- install [postman](https://www.postman.com/downloads/) and import the [postman collection](https://github.com/fabianaramos/city_state_connect/blob/main/city_state_connect.postman_collection) to send requests (api)
+- install [postman](https://www.postman.com/downloads/) and import the [postman collection](https://github.com/fabianaramos/city_state_connect/blob/main/city_state_connect.postman_collection.json) to send requests (api)
