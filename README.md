@@ -1,5 +1,9 @@
 ## City State Connect
 
+City State Connect is an application to create or import and consult states and cities.
+
+To import the locales, the app integrates with IBGE api.
+
 # Pre-requisites
 
 - install [docker](https://docs.docker.com/get-docker/)
