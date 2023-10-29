@@ -1,15 +1,129 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-color: #FAF9F6;
+  font-family: Helvetica, Arial, sans-serif
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.secondary {
+  background-color: white;
+  border-radius: 8px;
+  border: solid red 2px;
+  box-sizing: border-box;
+  color: red;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: middle;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.display-buttons{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 15%;
+  gap: 5px
+ }
+
+.primary:hover,
+.primary:focus {
+  background-color: #F082AC;
+}
+
+.secondary:hover,
+.secondary:focus {
+  background-color: #FBEBEA;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
+
+.child {
+  flex: 1 0 15%;
+  margin: 5px;
+  height: 70px;
+  width: 200px;
+  background-color: #EED3DE;
+  border-radius: 30px;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.child:hover {
+  background-color: #F3E7EC;
+  color: white;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin: 8px 0;
+  width: 400px;
+  box-sizing: border-box;
+  border: 3px solid #EED3DE;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #F082AC;
+}
+
+.center-container {
+  height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}

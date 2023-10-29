@@ -1,10 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>
 <%= render @city %>
+</h1>
 
-<div>
-  <%= link_to "Edit this city", edit_state_city_path(@state, @city) %> |
-  <%= link_to "Back to state", state_path(@state) %>
-
-  <%= button_to "Destroy this city", [@state, @city], method: :delete %>
+<div style="text-decoration: underline;">
+  <%= link_to "Back to #{@state.name}", state_path(@state) %>
+</div>
+<div class='display-buttons'>
+  <%= link_to "Edit city", edit_state_city_path(@state, @city), class: 'primary' %> 
+  <%= button_to "Destroy", [@state, @city], method: :delete, class: 'secondary' %>
 </div>

@@ -3,7 +3,8 @@ class CitiesController < ApplicationController
   before_action :set_city, only: %i[show edit update destroy]
 
   def index
-    @cities = @state.cities.all
+    @cities = @state.cities
+                    .order(:name)
   end
 
   def show; end

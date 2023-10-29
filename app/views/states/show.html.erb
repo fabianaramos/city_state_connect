@@ -2,11 +2,13 @@
 
 <h1><%= render @state %></h1>
 
-<div>
-  <%= link_to "Edit this state", edit_state_path(@state) %> |
+<div style="text-decoration: underline;">
   <%= link_to "Back to states", states_path %>
-
-  <%= button_to "Destroy this state", @state, method: :delete %>
 </div>
 
-<%= render 'cities/index' %>
+<div class='display-buttons'>
+  <%= link_to "Edit state", edit_state_path(@state), class: 'primary' %> 
+  <%= button_to "Destroy", @state, method: :delete, class: 'secondary' %>
+</div>
+
+<%= render 'cities/list' %>

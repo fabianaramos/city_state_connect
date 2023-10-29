@@ -1,0 +1,16 @@
+<h2>Cities</h2>
+
+<div id="cities", class='parent'>
+  <% @state.cities.order(:name).each do |city| %>
+    <%= link_to state_city_path(@state, city) do %>
+      <div class='child'>
+        <%= render city %>
+      </div>
+    <%end%>
+  <% end %>
+</div>
+
+<div style="margin-top: 15px;">
+  <%= link_to "New city", new_state_city_path(@state), class: 'primary' %>
+</div>
+

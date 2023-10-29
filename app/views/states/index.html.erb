@@ -1,17 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<h2>Import States:</h2>
-<%= button_to "Import", import_cities_jobs_path(:method => :post)%>
+<div>
+  <h1>States</h1>
 
-<h1>States</h1>
+  <div style='margin-top: 10px;'>
+    <%= link_to "New state", new_state_path, class: 'primary' %>
+  </div>
+</div>
 
-<div id="states">
+<div id="states" class='parent' style="margin-top: 10px;">
   <% @states.each do |state| %>
-    <%= render state %>
-    <p>
-      <%= link_to "Show this state", state %>
-    </p>
+    <%= link_to state_path(state) do %>
+      <div class='child' >
+        <%= render state %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New state", new_state_path %>
+<div style='margin-top: 50px;'>
+  <h2>Import states and cities:</h2>
+  <%= button_to "Import", import_cities_jobs_path(:method => :post), class: 'primary' %>
+</div>
+

@@ -1,10 +1,14 @@
-<h1>Editing city</h1>
+<div class='center-container'>
+  <div>
+    <h1>Editing city</h1>
 
-<%= render "form", city: @city %>
+    <%= render "form", city: @city %>
 
-<br>
+    <br>
 
-<div>
-  <%= link_to "Show this city", state_city_path(@state, @city) %> |
-  <%= link_to "Back to cities", @state %>
+    <div style='text-decoration: underline;'>
+      <%= link_to "Show this city", state_city_path(@state, @city) %> |
+      <%= link_to "Back to cities", @state %>
+    </div>
+  </div>
 </div>
