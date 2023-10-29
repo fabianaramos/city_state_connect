@@ -21,7 +21,7 @@ class CitiesController < ApplicationController
     respond_to do |format|
       if @city.save
         format.html { redirect_to state_url(@state), notice: 'City was successfully created.' }
-        format.json { render :show, status: :created, location: @city }
+        format.json { render :show, status: :created }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @city.errors, status: :unprocessable_entity }
@@ -33,7 +33,7 @@ class CitiesController < ApplicationController
     respond_to do |format|
       if @city.update(city_params)
         format.html { redirect_to state_city_url(@state, @city), notice: 'City was successfully updated.' }
-        format.json { render :show, status: :ok, location: @city }
+        format.json { render :show, status: :ok }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @city.errors, status: :unprocessable_entity }
@@ -46,7 +46,7 @@ class CitiesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to state_url(@state), notice: 'City was successfully destroyed.' }
-      format.json { head :no_content }
+      format.json { render :show, status: :ok }
     end
   end
 

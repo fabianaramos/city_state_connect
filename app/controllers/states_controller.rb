@@ -20,7 +20,7 @@ class StatesController < ApplicationController
     respond_to do |format|
       if @state.save
         format.html { redirect_to state_url(@state), notice: 'State was successfully created.' }
-        format.json { render :show, status: :created, location: @state }
+        format.json { render :show, status: :created }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @state.errors, status: :unprocessable_entity }
@@ -45,7 +45,7 @@ class StatesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to states_url, notice: 'State was successfully destroyed.' }
-      format.json { head :no_content }
+      format.json { render :show, status: :ok }
     end
   end
 

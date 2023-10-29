@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :states do
     resources :cities
   end
-  resources :import_cities_jobs, only: %i[index show create]
+  resources :import_locales_jobs, only: %i[index show create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -3,7 +3,7 @@ require 'net/http'
 class ImportLocalesWorker
   include Sidekiq::Worker
 
-  def perform(_id)
+  def perform
     JSON.parse(response).map do |locale|
       state = State.find_or_create_by!(name: locale['microrregiao']['mesorregiao']['UF']['nome'])
       state.cities.find_or_create_by!(name: locale['nome'])

@@ -19,7 +19,7 @@ services:
 
   worker:
     build: ./
-    command: bundle exec sidekiq
+    command: bundle exec sidekiq -C config/sidekiq/worker.yml
     volumes:
       - .:/docker/app
     depends_on:
