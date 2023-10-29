@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "f206e734-6cd5-4cd2-86fa-9a956bc8ab32",
+		"name": "city_state_connect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17766948"
+	},
+	"item": [
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "Index Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities/:id.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create City",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": {\n        \"name\": \"São José dos Campos\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update City",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": {\n        \"name\": \"São José dos Campos\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities/:id.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete City",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities/:id.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "States",
+			"item": [
+				{
+					"name": "Index States",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/states.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:id.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create City",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"state\": {\n        \"name\": \"São José dos Campos\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{city_state_connect_url}}/states.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update City",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"city\": {\n        \"name\": \"São José dos Campos\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities/:id.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete City",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/states/:state_id/cities/:id.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"states",
+								":state_id",
+								"cities",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "state_id",
+									"value": "1"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Import Locales Jobs",
+			"item": [
+				{
+					"name": "Index Import Locales Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/import_locales_jobs",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"import_locales_jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Import Locales Job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/import_locales_jobs/:id",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"import_locales_jobs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Import Locales Job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{city_state_connect_url}}/import_locales_jobs.json",
+							"host": [
+								"{{city_state_connect_url}}"
+							],
+							"path": [
+								"import_locales_jobs.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "city_state_connect_url",
+			"value": "localhost:3000"
+		}
+	]
+}

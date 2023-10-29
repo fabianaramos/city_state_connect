@@ -18,7 +18,11 @@ $ docker compose up
 
 ```bash
 $ docker ps
-$ docker exec -it <CONTAINER_ID> rails db:setup
+$ docker exec -it <CONTAINER_ID> rails db:create
+$ docker exec -it <CONTAINER_ID> rails db:migrate
+$ docker exec -it <CONTAINER_ID> rails db:seed
+
+
 ```
 
 # Running tests
@@ -36,9 +40,3 @@ $ docker exec -it <CONTAINER_ID> rspec
 or
 
 - install [postman](https://www.postman.com/downloads/) and import the [postman collection](https://github.com/fabianaramos/city_state_connect/blob/main/city_state_connect.postman_collection) to send requests (api)
-
-# Libraries
-
-- gem [active_model_serializers](https://github.com/rails-api/active_model_serializers)
-- gem [factory_bot_rails](https://github.com/thoughtbot/factory_bot)
-- gem [rspec-rails](https://github.com/rspec/rspec-rails/tree/6-0-maintenance)

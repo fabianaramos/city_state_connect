@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+state = State.create!(name: 'Paraná')
+
+state.cities.create!(name: 'Curitiba')
+state.cities.create!(name: 'Pato Branco')
+state.cities.create!(name: 'Maringá')
