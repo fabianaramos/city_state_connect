@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: postgres
     # env_file:
     #   - ./env/postgres.env # you can also define env variables like this.
-  rails:
+  web:
     build: ./
     ports:
       - '3000:3000'
@@ -16,6 +16,18 @@ services:
       - .:/docker/app # add our local code to dockerfile
     depends_on:
       - db # add all dependant container
+
+  worker:
+    build: ./
+    command: bundle exec sidekiq
+    volumes:
+      - .:/docker/app
+    depends_on:
+      - redis
+      - db
+
+  redis:
+    image: redis:latest
 
 volumes:
   postgres: # named volume

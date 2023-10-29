@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h2>Import States:</h2>
+<%= button_to "Import", import_cities_jobs_path(:method => :post)%>
+
+<h1>States</h1>
+
+<div id="states">
+  <% @states.each do |state| %>
+    <%= render state %>
+    <p>
+      <%= link_to "Show this state", state %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New state", new_state_path %>
