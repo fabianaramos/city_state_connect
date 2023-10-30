@@ -13,8 +13,8 @@ class ImportLocalesWorker
 
     @import_locales_job.update!(status: :finished)
   rescue StandardError => e
-    raise
     @import_locales_job.update!(status: :failed)
+    raise
   end
 
   def uri
