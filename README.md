@@ -29,7 +29,7 @@ $ docker exec -it <CONTAINER_ID> rails db:seed
 
 # Running tests
 
-- Open a new terminal window and copy and paste the following command:
+- Open a new terminal tab and copy and paste the following command:
 
 ```bash
 $ docker exec -it <CONTAINER_ID> rspec
