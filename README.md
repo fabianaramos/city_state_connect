@@ -10,7 +10,7 @@ To import the locales, the app integrates with IBGE api.
 
 # Starting the application
 
-- Copy and paste the following command on your terminal:
+- After cloning the repository, copy and paste the following command on your terminal:
 
 ```bash
 $ docker compose up
@@ -25,13 +25,11 @@ $ docker ps
 $ docker exec -it <CONTAINER_ID> rails db:create
 $ docker exec -it <CONTAINER_ID> rails db:migrate
 $ docker exec -it <CONTAINER_ID> rails db:seed
-
-
 ```
 
 # Running tests
 
-- Copy and paste the following command on your terminal:
+- Open a new terminal window and copy and paste the following command:
 
 ```bash
 $ docker exec -it <CONTAINER_ID> rspec
